@@ -3,6 +3,7 @@ using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
 using Google.Apis.Util.Store;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -48,16 +49,18 @@ namespace googlesheetApp
             SpreadsheetsResource.ValuesResource.GetRequest request = sheetsService.Spreadsheets.Values.Get(SpreadSheetId, SheetName);
             ValueRange response = request.Execute();
             var values = response.Values;
-            foreach (var val in values)
-            {
-                Console.WriteLine(val.ToString());
-            }
+            DimensionRange dimensionRange = new DimensionRange();
+            dimensionRange.Dimension = response.MajorDimension;
+            //foreach (var val in values)
+            //{
+            //    Console.WriteLine(val.ToString());
+            //}
+            Console.WriteLine(JsonConvert.SerializeObject(response));
         }
         static void CreateEntries()
         {
             var Range = $"{SheetName}!A:F";
             var f = new List<Object>() { 1, 2, 3 };
-
             ValueRange valueRange = new ValueRange();
             valueRange.Values = new List<IList<Object>> { f };
             var request = sheetsService.Spreadsheets.Values.Append(valueRange, SpreadSheetId, SheetName /*Range*/);
