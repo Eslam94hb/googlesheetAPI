@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "googlesheetApp", "googleshe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollectingDataFromWebPage", "CollectingDataFromWebPage\CollectingDataFromWebPage.csproj", "{B4FE15FE-B027-467A-B6F6-288482DAA44E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeScraper", "YoutubeScraper\YoutubeScraper.csproj", "{DAEC75BD-48CD-4B41-8E52-828F5C1CA499}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B4FE15FE-B027-467A-B6F6-288482DAA44E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4FE15FE-B027-467A-B6F6-288482DAA44E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4FE15FE-B027-467A-B6F6-288482DAA44E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAEC75BD-48CD-4B41-8E52-828F5C1CA499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAEC75BD-48CD-4B41-8E52-828F5C1CA499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAEC75BD-48CD-4B41-8E52-828F5C1CA499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAEC75BD-48CD-4B41-8E52-828F5C1CA499}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
